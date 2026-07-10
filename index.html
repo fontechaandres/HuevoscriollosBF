@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huevos Criollos BF</title>
+    <style>
+        /* --- ESTILOS GENERALES Y CONFIGURACIÓN ANTI-DESBORDE --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden; /* Evita que la pantalla se mueva hacia los lados en el celular */
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* --- HEADER Y NAVEGACIÓN RESPONSIVA --- */
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap; /* Clave para que baje en pantallas chicas */
+            gap: 15px;
+        }
+
+        .logo h1 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #222;
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            flex-wrap: wrap; /* Si los links no caben en el celular, se acomodan abajo automáticamente */
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #e67e22;
+        }
+
+        /* --- CONTENEDOR PRINCIPAL --- */
+        main {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* --- SECCIÓN DE CARACTERÍSTICAS / INFO --- */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Se hace rejilla automática según el espacio */
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .feature-card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            text-align: center;
+            border-top: 4px solid #e67e22;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+            color: #222;
+        }
+
+        /* --- SECCIÓN SECCIONES GENERALES --- */
+        .section-title {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #222;
+        }
+
+        /* --- CATÁLOGO DE PRODUCTOS --- */
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            justify-content: center;
+        }
+
+        .product-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+            overflow: hidden;
+            padding: 20px;
+            text-align: center;
+            max-width: 340px;
+            margin: 0 auto; /* Centra la tarjeta si queda sola en móvil */
+        }
+
+        .product-image-placeholder {
+            width: 100%;
+            height: 220px;
+            background-color: #eaeaea;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+            color: #777;
+            font-style: italic;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            padding: 10px;
+        }
+
+        .product-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #222;
+        }
+
+        .product-details {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .product-price {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #e67e22;
+        }
+
+        /* --- RESPONSIVO PARA PANTALLAS MUY CHICAS (CELULARES) --- */
+        @media (max-width: 480px) {
+            .header-container {
+                flex-direction: column; /* Pone el título arriba y el menú abajo */
+                text-align: center;
+            }
+            
+            nav ul {
+                justify-content: center;
+                gap: 12px;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>Huevos Criollos BF</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#conocenos">Conócenos</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#contactanos">Contáctanos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </</header>
+
+    <main>
+
+        <section class="features-grid">
+            <div class="feature-card">
+                <h3>Nutrición Pura</h3>
+                <p>Aportan proteínas de alta calidad, vitaminas y la energía necesaria para empezar bien el día.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Frescura Diaria</h3>
+                <p>Del campo directo a tu hogar, sin intermediarios ni procesos pesados que alteren su calidad.</p>
+            </div>
+        </section>
+
+        <section id="productos">
+            <h2 class="section-title">Nuestro Catálogo</h2>
+            
+            <div class="catalog-grid">
+                <div class="product-card">
+                    <div class="product-image-placeholder">
+                        [ Espacio para foto de Cubeta Tipo A ]
+                    </div>
+                    <h3>Cubeta Seleccionada Tipo A</h3>
+                    <p class="product-details">
+                        <strong>Peso promedio:</strong> 55g por unidad<br>
+                        <strong>Cantidad:</strong> 30 Huevos
+                    </p>
+                    <p class="product-price">$18.000 COP</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
